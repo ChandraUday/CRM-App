@@ -1,9 +1,14 @@
 import React from 'react'
+import blankAvatar from '../images/blank-profile.png'
 
-function AvatarDisplay() {
+function AvatarDisplay({ ticket }) {
   return (
-    <div>AvatarDispyylay</div>
-  )
+    <div className="avatar-container">
+    <div className="img-container">
+    <img src={ticket.avatar ? ticket.avatar : blankAvatar} alt={'photo of ' + ticket.owner} />
+    </div>
+    </div>
+    )
 }
 
 export default AvatarDisplay
